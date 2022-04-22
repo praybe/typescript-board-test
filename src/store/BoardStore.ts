@@ -1,0 +1,14 @@
+import SocialBoard from "../entity/board/SocialBoard";
+
+interface BoardStore {
+
+    create(board: SocialBoard): string;
+    retrieve(boardId: string): SocialBoard | null;
+    retrieveByName(name: string): SocialBoard[];
+    retrieveAll(): SocialBoard[];
+    update(board: SocialBoard): void;
+    delete(boardId: string): void;
+    exists(boardId: string): boolean;
+
+}
+export default BoardStore;
